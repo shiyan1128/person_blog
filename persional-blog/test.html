@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul class="pox"></ul>
+</body>
+<script>
+  function fn () {
+    console.log('1');
+    let promise = new Promise((resolve, reject) => {
+      console.log('2');
+      resolve('3')
+    })
+    setTimeout(() => {
+      console.log('4');
+    });
+    promise.then(res => {
+      console.log('5');
+      console.log(res); // 3
+      return '6'
+    }).then( res1 => {
+      console.log(res1+'9'); // 69
+      // console.log('9');
+    }).then(res2 => {
+      console.log(res2); // undefined
+    })
+  }
+  fn()
+</script>
+</html>

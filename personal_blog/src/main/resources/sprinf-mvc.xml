@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       https://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc.xsd
+       ">
+
+
+<!--    配置要扫描的包-->
+    <context:component-scan base-package="com.shiyan.controller"/>
+
+<!--    <mvc:resources mapping="/js/**" location="/js/"/>-->
+<!--    <mvc:resources location="/img/" mapping="/img/**" cache-period="360000"/>-->
+<!--    文件上传配置 -->
+<!--    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">-->
+<!--        <property name="defaultEncoding" value="utf-8"/>-->
+<!--        <property name="maxUploadSize" value="10485760"/>-->
+<!--        <property name="maxInMemorySize" value="40960"/>-->
+<!--    </bean>-->
+
+    <!-- 配置处理映射器-->
+    <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+    <!-- 配置处理器适配器-->
+    <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
+    <!-- 配置视图解析器，用来把controller中返回的逻辑视图名组装成真正的视图-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" id="internalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/page/"/>
+        <property name="suffix" value=".jsp"/>
+        <property name="order" value="10"/>
+    </bean>
+
+    <!--    序列化 -->
+    <bean id="customObiectMapper" class="com.shiyan.configuration.CustomObjectMapper"/>
+    <!--  全局处理异常  -->
+    <!--    配置注解驱动-->
+    <mvc:annotation-driven>
+        <mvc:message-converters>
+            <!--    消息转化器-->
+            <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+                <property name="objectMapper" ref="customObiectMapper"/>
+                <property name="supportedMediaTypes">
+                    <list>
+                        <value>text/plain;charset=UTF-8</value>
+                        <value>application/json;charset=UTF-8</value>
+                    </list>
+                </property>
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+
+</beans>

@@ -1,0 +1,135 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 4273381 */
+  src: url('iconfont.woff2?t=1698577712950') format('woff2'),
+       url('iconfont.woff?t=1698577712950') format('woff'),
+       url('iconfont.ttf?t=1698577712950') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-yinle:before {
+  content: "\e60f";
+}
+
+.icon-gerenxinxi:before {
+  content: "\e70d";
+}
+
+.icon-a-Frame20:before {
+  content: "\e608";
+}
+
+.icon-shouye:before {
+  content: "\e62e";
+}
+
+.icon-wode-copy:before {
+  content: "\e64a";
+}
+
+.icon-wenzhangguanli:before {
+  content: "\e67d";
+}
+
+.icon-music-heart:before {
+  content: "\e740";
+}
+
+.icon-fanhui:before {
+  content: "\e61e";
+}
+
+.icon-close-bold:before {
+  content: "\e685";
+}
+
+.icon-pause:before {
+  content: "\e7fe";
+}
+
+.icon-QQ:before {
+  content: "\e882";
+}
+
+.icon-weibo:before {
+  content: "\e883";
+}
+
+.icon-wechat-fill:before {
+  content: "\e884";
+}
+
+.icon-alipay-circle-fill:before {
+  content: "\e885";
+}
+
+.icon-taobao-circle-fill:before {
+  content: "\e88a";
+}
+
+.icon-caret-right:before {
+  content: "\e8ec";
+}
+
+.icon-search:before {
+  content: "\e8ef";
+}
+
+.icon-step-backward:before {
+  content: "\e8f0";
+}
+
+.icon-step-forward:before {
+  content: "\e8f1";
+}
+
+.icon-aixin:before {
+  content: "\e8ab";
+}
+
+.icon-buganxingqu:before {
+  content: "\e8ac";
+}
+
+.icon-bofangjilu:before {
+  content: "\e8ad";
+}
+
+.icon-chuangzuo:before {
+  content: "\e8ae";
+}
+
+.icon-fenxiang:before {
+  content: "\e8b0";
+}
+
+.icon-jianshao:before {
+  content: "\e8b1";
+}
+
+.icon-shanchu:before {
+  content: "\e8b6";
+}
+
+.icon-shengyinguanbi:before {
+  content: "\e8b8";
+}
+
+.icon-shengyin:before {
+  content: "\e8b9";
+}
+
+.icon-musiclist:before {
+  content: "\e69c";
+}
+
+.icon-arrow-down:before {
+  content: "\e665";
+}
+
